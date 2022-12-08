@@ -1,0 +1,3 @@
+<label>ラベル</label>
+<%= f.collection_select :label_id, Label.all, :id, :body %>
+<%= link_to_remove_association '削除', f %>

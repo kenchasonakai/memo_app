@@ -1,0 +1,18 @@
+<div id="<%= dom_id memo %>">
+  <p>
+    <strong>Title:</strong>
+    <%= memo.title %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= memo.body %>
+  </p>
+
+  <p>
+    <strong>Label:</strong>
+    <% memo.labels.each do |label| %>
+      <%= label.body %>
+    <% end %>
+  </p>
+</div>

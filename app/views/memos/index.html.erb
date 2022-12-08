@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Memos</h1>
+
+<div id="memos">
+  <% @memos.each do |memo| %>
+    <div id="<%= dom_id memo %>">
+      <p>
+        <strong>Title:</strong>
+        <%= memo.title %>
+      </p>
+    
+      <p>
+        <strong>Body:</strong>
+        <%= memo.body %>
+      </p>
+    
+      <p>
+        <strong>Label:</strong>
+        <% memo.labels.each do |label| %>
+          <%= label.body %>
+        <% end %>
+      </p>
+    </div>
+    <p>
+      <%= link_to "Show this memo", memo %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New memo", new_memo_path %>
